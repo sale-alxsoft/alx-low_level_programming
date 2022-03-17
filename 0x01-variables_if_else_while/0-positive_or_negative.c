@@ -6,7 +6,7 @@
  * main - assign a random number to the variable n
  * it is excuted each time
  * it print whether the number is positive or negative
- * Return (0): success
+ * Return: Always 0 (success)
  */
 
 int main(void)
