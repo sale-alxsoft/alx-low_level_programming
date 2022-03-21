@@ -7,7 +7,7 @@
  */
 void print_rev(char *s)
 {
-	while (*s++)
+	while (++*s)
 	{
 		_putchar(*s);
 	}
