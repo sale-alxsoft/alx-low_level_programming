@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * puts2 - prints every character of a string, starting with
@@ -8,9 +9,14 @@
  */
 void puts2(char *str)
 {
-	while (*str)
+	int i;
+
+	for (i = 0; i < strlen(str); i++)
 	{
-		_putchar(*str++);
+		while (*str)
+		{
+			_putchar(*str++);
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
