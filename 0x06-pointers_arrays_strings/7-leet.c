@@ -9,7 +9,7 @@ char *leet(char *enc)
 {
 	int i, j;
 
-	char *a = "aAeEo0tTlL";
+	char *a = "aAeEoOtTlL";
 	char *b = "4433007711";
 
 	for (i = 0; enc[i] != '\0'; i++)
