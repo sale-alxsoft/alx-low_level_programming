@@ -23,5 +23,5 @@ char *leet(char *enc)
 		}
 	}
 
-	return (s);
+	return (enc);
 }
