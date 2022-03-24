@@ -11,7 +11,7 @@ char *_strcat(char *dest, char *src)
 {
 	char termn = '\0';
 
-	*dest = strcat(*dest, *src);
-	*dest = strcat(*dest, termn);
+	*dest = strcat(dest, src);
+	*dest = strcat(dest, termn);
 	return (dest);
 }
