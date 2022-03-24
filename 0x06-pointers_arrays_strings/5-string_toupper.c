@@ -5,15 +5,15 @@
  * @up: a pointer to modify a string
  * Return: reversed string
  */
-char *string_toupper(char *)
+char *string_toupper(char *up)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; up[i] != '\0'; i++)
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
-			s[i] = s[i] - 32;
+		if (up[i] >= 'a' && up[i] <= 'z')
+			up[i] = up[i] - 32;
 	}
 
-	return (s);
+	return (up);
 }
