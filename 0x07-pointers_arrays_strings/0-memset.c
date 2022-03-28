@@ -5,11 +5,11 @@
  * @s: a pointer to be filled
  * @b: a string to fill s
  * @n: a number of elements to be filled
- * Return: s.
+ * Return: a pointer to the memory area s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i;
+	unsigned int i;
 	
 	i = 0;
 	while (i < n)
