@@ -17,7 +17,7 @@ char *_strstr(char *haystack, char *needle)
 	{
 		if (haystack[i] == needle[j])
 		{
-			_putchar("%c", s[i]);
+			_putchar("%c", haystack[i]);
 			j += 1;
 		}
 		i++;
