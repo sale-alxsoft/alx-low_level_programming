@@ -15,11 +15,18 @@ char *_strstr(char *haystack, char *needle)
 	j = 0;
 	while (haystack[i] != '\0')
 	{
-		if (haystack[i] == needle[j])
+		while (needle[j] != '\0')
 		{
-			_putchar("%c", haystack[i]);
-			j += 1;
+		    if (haystack[i + j] != needle[j])
+            {
+                break;
+            }
+			j++;
 		}
+        if (!needle[j])
+            {
+                return (&haystack[i]);
+            }
 		i++;
 	}
 	return ('\0');
