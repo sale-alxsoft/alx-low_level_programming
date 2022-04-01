@@ -14,6 +14,12 @@ int main(int argc, char *argv[])
 
 	i = 1;
 	r = 1;
+	if (argv[i] == (void *)0)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
 	while (i < argc)
 	{
 		r = r * atoi(argv[i]);
