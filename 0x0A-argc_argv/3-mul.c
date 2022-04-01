@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 	}
 	while (i < argc)
 	{
+		(void)argc;
 		r = r * atoi(argv[i]);
 		i++;
 	}
