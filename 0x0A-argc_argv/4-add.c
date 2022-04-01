@@ -10,25 +10,29 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	int total;
+	int i, j, num, total;
 
-	i = 1;
 	total = 0;
-	while (i < argc)
+	if (argc > 1)
 	{
-		if (argv[i] == (void *)0)
+		for (i = 0; i < argc; i++)
 		{
-			return (0);
+			for (j = 0; argv[i][j] != '\0'; j++)
+			{
+				if (argv[i][j] < '0' || argv[i][j] > '9')
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			num = atoi(argv[i]);
+			total += num;
 		}
-		if (!(atoi(argv[i]) / i))
-		{
-			printf("Error\n");
-			return (1);
-		}
-		total += atoi(argv[i]);
-		i++;
+		printf("%d\n", total);
 	}
-	printf("%d\n", total);
+	else
+	{
+		printf("0\n");
+	}
 	return (0);
 }
