@@ -16,15 +16,15 @@ char *_strdup(char *str)
 
 	i = 0;
 	j = 0;
+	if (str = NULL)
+	{
+		return (NULL)
+	}
 	while (str[j] != '\0')
 	{
 		j++;
 	}
 	dupstr = (char *)malloc(sizeof(char) * (j + 1));
-	if (str == NULL)
-	{
-		return (NULL);
-	}
 	if (dupstr == NULL)
 	{
 		return (NULL);
