@@ -28,7 +28,7 @@ int **alloc_grid(int width, int height)
 		{
 			ptr[i][j] = v;
 			if (j == width - 1)
-				printf('\n');
+				_putchar('\n');
 		}
 	}
 	return (ptr);
