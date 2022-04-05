@@ -10,7 +10,7 @@
 int **alloc_grid(int width, int height)
 {
 	int i, j;
-	int **prt;
+	int **ptr;
 	int v;
 
 	v = 0;
@@ -28,7 +28,7 @@ int **alloc_grid(int width, int height)
 		{
 			ptr[i][j] = v;
 			if (j == width - 1)
-				printf('\n')
+				printf('\n');
 		}
 	}
 	return (ptr);
