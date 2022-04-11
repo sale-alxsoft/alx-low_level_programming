@@ -7,7 +7,7 @@
  * @name: first member
  * @age: second member
  * @owner: third member
- * Return: a pointer to a variable of type struct dog
+ * Return: a pointer to a variable
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
