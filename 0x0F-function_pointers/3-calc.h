@@ -1,5 +1,10 @@
 #ifndef CALC
 #define CALC
+/**
+ * struct op - new data type op
+ * @op: a pointer to an operator
+ * @f: a function pointer points to operator functions
+ */
 typedef struct op
 {
 	char *op;
