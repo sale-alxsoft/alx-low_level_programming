@@ -10,27 +10,22 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t fd;
+	ssize_t rd;
 	char *buff = malloc(letters * sizeof(char));
 
 	if (buff == NULL)
 		return (0);
-	
 	fd = open(filename, O_RDONLY);
-	if (filename == NULL || fd == -1)
+	rd = read(fd, buff, letters);
+	if (filename == NULL || fd == -1 || rd == -1)
 	{
 		return (0);
 	}
-
-	ssize_t r;
-	r = read(fd, buff, letters);
 	buff[letters] = '\0';
 
 	close(fd);
 
 	printf("%s\n", buff);
 
-	fd = write(STDOUT_FILENO, buff, r);
-	if (fd = -1)
-		return (0);
-	return (fd);
+	return (rd);
 }
