@@ -14,20 +14,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t wr;
 	char *buff = malloc(letters * sizeof(char));
 
-	if (buff == NULL)
+	if (filename == NULL || buff == NULL)
+	{
+		free(buff);
 		return (0);
+	}
 	fd = open(filename, O_RDONLY);
 	rd = read(fd, buff, letters);
 	wr = write(STDOUT_FILENO, buff, rd);
-	if (filename == NULL || fd == -1 || rd == -1 || wr == -1 || wr != rd)
+	if (fd == -1 || rd == -1 || wr == -1 || wr != rd)
 	{
 		return (0);
 	}
-	buff[letters] = '\0';
 
+	free(buff);
 	close(fd);
 
-	printf("%s\n", buff);
-
-	return (rd);
+	return (wr);
 }
